@@ -1,6 +1,5 @@
 <template>
   <div>
-    <navigation></navigation>
     <div class="ts narrow container relaxed stackable grid">
       <div class="eleven wide column" style="padding: 0px">
         <div class="column" style="">
@@ -540,17 +539,13 @@
 </template>
 
 <script>
-import navigation from "@/components/NavBar.vue";
 
 export default {
-data() {
-    return {
-            user: {},
-        };
-},
-    components: {
-        navigation
-    },
+  data() {
+      return {
+              user: {},
+          };
+  }
 };
 </script>
 

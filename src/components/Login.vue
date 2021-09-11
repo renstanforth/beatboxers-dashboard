@@ -1,18 +1,27 @@
 <template>
-  <div class="vertical-center">
-    <div class="inner-block">
-      <div class="vue-template">
-          <navigation></navigation>
-          <h5 class="center-align">Login</h5>
-          <section id="firebaseui-auth-container"></section>
-      </div>
+  <div class="authincation h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+                <div class="authincation-content">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <img class="brand-logo" src="../assets/logo.png" alt="Cebu Elite Beatboxers United Logo">
+                                <h4 class="text-center mb-4">Login to your account</h4>
+                                <section id="firebaseui-auth-container"></section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
 </template>
 
 
 <script>
-import navigation from "@/components/NavBar.vue";
 import firebase from "firebase";
 import * as firebaseui from "firebaseui";
 import "firebaseui/dist/firebaseui.css";
@@ -22,9 +31,6 @@ export default {
   data() {
     return {};
   },
-  components: {
-        navigation
-    },
   mounted() {
       let ui = firebaseui.auth.AuthUI.getInstance();
       if (!ui) {

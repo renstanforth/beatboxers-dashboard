@@ -11,9 +11,12 @@ Vue.use(VueRouter)
     component: () => import('../components/Login.vue')
   },
   {
-    path: '/home',
+    path: '/',
     name: 'home',
-    component: () => import('../components/Home.vue')
+    component: () => import('../components/Home.vue'),
+    meta: {
+      auth: true
+    }
   },
   {
     path: '/profile',
@@ -32,7 +35,9 @@ Vue.use(VueRouter)
     path: '/user-deletion',
     name: 'user-deletion',
     component: () => import('../components/UserDeletion.vue')
-  }
+  },
+  { path: '/404', component: () => import('../components/404.vue') },  
+  { path: '*', redirect: '/404' },
 ]
 
 const router = new VueRouter({
